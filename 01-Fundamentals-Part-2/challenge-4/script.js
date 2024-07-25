@@ -10,6 +10,7 @@ Suas tarefas:
 
 Crie uma função de seta 'calcAverage' para calcular a média de 3 pontuações.
 Use a função para calcular a média para ambos os times.
+
 Crie uma função 'checkWinner' que recebe a pontuação média de cada time como parâmetros ('avgDolhins' e 'avgKoalas') e então exibe o vencedor no console, junto com os pontos da vitória, de acordo com a regra acima. Exemplo: "Koalas win (30 vs. 13)"
 Use a função 'checkWinner' para determinar o vencedor para ambos os Dados 1 e Dados 2.
 Ignore empates desta vez.
@@ -37,21 +38,18 @@ if (mediaPontosDolphins > mediaPontosKoalas && mediaPontosDolphins >= 100) {
 }
 */
 
-function calcAverage (primeiraRodada, segundaRodada, terceiraRodada) {
-    return (primeiraRodada + segundaRodada + terceiraRodada) / 3;
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+const checkWinner = function (avgDolhins, avgKoalas) {
+    avgDolhins = calcAverage(85, 54, 41);
+    avgKoalas = calcAverage(23, 34, 27);
+
+    if (avgDolhins > avgKoalas && avgDolhins >= 2 * avgKoalas) {
+        console.log(`Dolphins win (${avgDolhins} vs. ${avgKoalas}) 🐬🏆`);
+    } else if (avgKoalas > avgDolhins && avgKoalas >= 2 * avgDolhins) {
+        console.log(`Koalas win (${avgDolhins} vs. ${avgKoalas} 🐨🏆)`);
+    } else {
+        console.log(`Nobody won 😕 (${avgDolhins} vs. ${avgKoalas})`);
+    }
 }
-
-const dolphinsPontos = calcAverage(44, 23, 71);
-const koalasPontos = calcAverage(65, 54, 49);
-console.log(dolphinsPontos, koalasPontos);
-
-function checkWinner (avgDolphins, avgKoalas) {
-    avgDolphins = dolphinsPontos;
-    avgKoalas = koalasPontos;
-
-    return `O ganhador é ${avgDolphins}`
-
-
-}
-
-const resultado = checkWinner(dolphinsPontos);
+checkWinner();
