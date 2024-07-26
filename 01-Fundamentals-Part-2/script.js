@@ -55,12 +55,12 @@ console.log(age2);
 // const calcAge2 = function (birthYear) {
     //     return 2027 - birthYear;
     // }
-    
+
     // Arrow function
     const calcAge3 = birthYear => 2037 - birthYear;
     const age3 = calcAge3(1991);
     console.log(age3);
-    
+
     const yearsUltilRetirement = (birthYear, firstName) => {
     const age = 2024 - birthYear;
     const retirement = 65 - age;
@@ -102,7 +102,7 @@ function yearsUltilRetirement(birthYear, firstName) {
 
 console.log(yearsUltilRetirement(1991, 'João'));
 console.log(yearsUltilRetirement(2002, 'John'));
-console.log(yearsUltilRetirement(1960, 'Samuel')); 
+console.log(yearsUltilRetirement(1960, 'Samuel'));
 
 const friend1 = 'Michael';
 const friend2 = 'John';
@@ -147,15 +147,40 @@ const friend3 = 'Steven';
 // const ages = [age1, age2, age3, age4, age5];
 // console.log(ages);
 
+// const friends = new Array('Michael', 'John', 'Nolan');
+
+// // ADD ELEMENTOS
+// const newLength = friends.push('Jay'); // Adicionar um elemento no final do Array
+// console.log(friends);
+// console.log(newLength);
+
+// friends.unshift('Steven'); // Irá adicionar um elemento no começo do Array
+// console.log(friends);
+
+// // REMOVE ELEMENTS 
+// friends.pop(); // Remove elemento no fim do array
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
+
+// friends.shift(); // Remove o primeiro elemento
+// console.log(friends);
+
+// console.log(friends.indexOf('John'));
+// console.log(friends.indexOf('Bob'));
+
+// friends.push(23);
+// console.log(friends.includes('John'));
+// console.log(friends.includes('Steven'));
+
+// friends.push('Peter');
 
 
-
-
-
-
-
-
-
+// if (friends.includes('Peter')) {
+//     console.log('Você tem um amigo chamado Peter');
+// } else {
+//     console.log('Você não tem nenhum amigo chamado Peter :(');
+// }
 
 
 
