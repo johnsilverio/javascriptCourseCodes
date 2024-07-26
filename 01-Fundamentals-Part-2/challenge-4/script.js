@@ -40,16 +40,17 @@ if (mediaPontosDolphins > mediaPontosKoalas && mediaPontosDolphins >= 100) {
 
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
-const checkWinner = function (avgDolhins, avgKoalas) {
-    avgDolhins = calcAverage(85, 54, 41);
-    avgKoalas = calcAverage(23, 34, 27);
+const scoreDolphins = calcAverage(85, 54, 41);
+const scoreKoalas = calcAverage(23, 34, 27);
 
-    if (avgDolhins > avgKoalas && avgDolhins >= 2 * avgKoalas) {
-        console.log(`Dolphins win (${avgDolhins} vs. ${avgKoalas}) 🐬🏆`);
-    } else if (avgKoalas > avgDolhins && avgKoalas >= 2 * avgDolhins) {
-        console.log(`Koalas win (${avgDolhins} vs. ${avgKoalas} 🐨🏆)`);
+const checkWinner = function (avgDolphins, avgKoalas) {
+
+    if (avgDolphins > avgKoalas && avgDolphins >= 2 * avgKoalas) {
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas}) 🐬🏆`);
+    } else if (avgKoalas > avgDolphins && avgKoalas >= 2 * avgDolphins) {
+        console.log(`Koalas win (${avgDolphins} vs. ${avgKoalas} 🐨🏆)`);
     } else {
-        console.log(`Nobody won 😕 (${avgDolhins} vs. ${avgKoalas})`);
+        console.log(`Nobody won 😕 (${avgDolphins} vs. ${avgKoalas})`);
     }
 }
-checkWinner();
+checkWinner(scoreDolphins, scoreKoalas);
