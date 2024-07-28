@@ -175,7 +175,6 @@ const friend3 = 'Steven';
 
 // friends.push('Peter');
 
-
 // if (friends.includes('Peter')) {
 //     console.log('Você tem um amigo chamado Peter');
 // } else {
@@ -183,14 +182,163 @@ const friend3 = 'Steven';
 // }
 
 
+// const johnArray = [
+//     'John',
+//     'Silverio',
+//     2024 - 2002,
+//     'programmer',
+//     ['Lucas', 'Jean', 'Steven']
+// ];
 
+// const john = {
+//     firstName: 'John',
+//     lastName: 'Silverio',
+//     age: 2024 - 2002,
+//     job: 'programmer',
+//     friends: ['Lucas', 'Jean', 'Steven']
+// };
+// console.log(john);
 
+// console.log(john.lastName);
 
+// console.log(john['lastName']);
 
+// const nameKey = 'Name';
+// console.log(john['first' + nameKey]);
+// console.log(john['last' + nameKey]);
 
+// const interestedIn = prompt('What do you want to know about John? Choose between firstName, lastName, age, job and friends');
 
+// const aswer = john[interestedIn] ? console.log(john[interestedIn]) : console.log('Error 404');
 
+// john.location = 'Brazil';
+// john['twitter'] = '@johnsilverio';
+// console.log(john);
 
+// // Challenge 
+// // "John has 3 friends, and his best friends is called Lucas, Jean e Steven!"
+// console.log(`${john.firstName} has ${john.friends.length} friends, and his best friend is called ${john.friends[1]}`);
+
+// const john = {
+//     firstName: 'John',
+//     lastName: 'Silverio',
+//     birthYear: 2002,
+//     job: 'programmer',
+//     friends: ['Lucas', 'Jean', 'Steven'],
+//     hasDriversLicense: true,
+
+//     // Method 
+//     // calcAge: function (birthYear) {
+//     //     return 2024 - birthYear; 
+//     // }
+//     // calcAge: function () {
+//     //     return 2024 - this.birthYear; 
+//     // }
+//     calcAge: function () {
+//         this.age = 2024 - this.birthYear;
+//         return this.age; 
+//     },
+//     getSummary: function () {
+//         return console.log(`${this.firstName} is a ${this.calcAge()}-years old ${this.job}, he has ${this.hasDriversLicense ? "a" : "no"} driver's liscense and your best friend is ${this.friends[0]}.`);
+//     }
+// };
+// Challange 
+// "John is a 22-year old programmer. and he has a driver's liscense, your best friend is Lucas"
+// console.log(john.getSummary())
+
+// Ainda deve ser calculado uma vez e depois chamar a propriedade de dentro do método uma vez que já foi chamado.
+
+function loopsLecture() {
+    // DRY Dont Repeat Yourself
+    for (let index = 1; index <= 10; index++) {
+        console.log(`Lifting weights repetition ${index} 🏋️`);
+    }
+}
+
+function loopsArrayLecture() {
+
+    const johnArray = [
+        'John',
+        'Silverio',
+        2024 - 2002,
+        'programmer',
+        ['Jean', 'Lucas', 'Stevem']
+    ];
+
+    const types = [];
+
+    for (let i = 0; i < johnArray.length; i++) {
+        console.log(johnArray[i]);
+
+        // types[i] = typeof johnArray[i];
+        types.push(typeof johnArray[i]);
+    }
+    console.log(types);
+
+    const years = [1991, 2007, 1969, 2020];
+    const ages = [];
+    for (let i = 0; i < years.length; i++) {
+        ages.push(2024 - years[i]);
+    }
+    console.log(ages);
+    console.log('---- ONLY STRINGS ----');
+    for (let i = 0; i < johnArray.length; i++) {
+        if (typeof johnArray[i] !== 'string') continue;
+        console.log(johnArray[i], typeof johnArray[i]);
+    }
+
+    console.log('---- BREAK WITH NUMBER ----');
+    for (let i = 0; i < johnArray.length; i++) {
+        if (typeof johnArray[i] === 'number') break;
+        console.log(johnArray[i], typeof johnArray[i]);
+    }
+}
+// Continue and break 
+function loopsBackwardsLoops() {
+
+    const john = [
+        'John',
+        'Silverio',
+        2024 - 2002,
+        'programmer',
+        ['Lucas', 'Jean', 'Steven'],
+        true
+    ];
+
+    for (let i = john.length - 1; i >= 0; i--) {
+        console.log(i, john[i]);
+    }
+
+    for (let exercises = 1; exercises < 4; exercises++ ) {
+        console.log(`====== Starting exercises ${exercises} ======`);
+        for (let rep = 1; rep < 6; rep++) {
+            console.log(`Repetition: 🏋️‍♂️${rep}`)
+        }
+    }
+}
+// loopsBackwardsLoops();
+
+function loopsWhile () {
+//    for (let rep = 1; rep <= 10; rep++) {
+    //    console.log(`Lifting weights repetition ${rep} 🏋️`);
+//    }
+
+    // let rep = 0;
+    // while (rep <= 10) {
+    //     console.log(`Lifting weights repetition ${rep} 🏋️`)
+    //     rep++;
+    // }   
+
+    let dice = Math.trunc(Math.random() * 6) + 1;
+    // console.log(dice);
+
+    while (dice !== 6) {
+        console.log(`You rolled a ${dice}`);
+        dice = Math.trunc(Math.random() * 6) + 1;
+        if (dice === 6) console.log(`Loop is about to end...`);
+    }
+}
+loopsWhile();
 
 
 

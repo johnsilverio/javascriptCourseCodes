@@ -54,23 +54,59 @@ const mediaArray = function (array) {
 const arrMedia1 = new Array(2, 4, 6, 8, 10);
 const arrMedia2 = new Array(5, 15, 25, 35);
 
-// console.log(mediaArray(arrMedia1));
-// console.log(mediaArray(arrMedia2));
+console.log(mediaArray(arrMedia1));
+console.log(mediaArray(arrMedia2));
 
+/// DESAFIO PARES
 const elementosPares = function (array) {
-    const count = 0;
+    const pares = [];
     for (let i = 0; i < array.length; i++) {
-
+        if(array[i] % 2 === 0) {
+            pares.push(array[i]);
+        }
     }
-    return count % 2 === 0;
+    return pares;
 }
 
-const arrPar1 = [1, 2, 3, 4, 5, 6];
-const arrPar2 = [2, 4, 6];
+// const arrPar1 = [1, 2, 3, 4, 5, 6];
+// const arrPar2 = [10, 15, 20, 25];
 
-console.log(elementosPares(arrPar1));
-console.log(elementosPares(arrPar2));
-
-
+// console.log(elementosPares(arrPar1));
+// console.log(elementosPares(arrPar2));
 
 
+// Exercício 4: Contatenar Arrays
+const concatenaArrays = function (arr1, arr2) {
+    let array = [];
+    for (let i = 0; i < arr1.length; i++) {
+        array.push(arr1[i]);
+    }
+    for (let i = 0; i < arr2.length; i++) {
+        array.push(arr2[i]);
+    }
+    return array;
+}
+let concArray1 = [1, 2, 3];
+let concArray2 = [4, 5, 6];
+// console.log(concatenaArrays(concArray1, concArray2));
+
+let concArray3 = ['a', 'b', 'c'];
+let concArray4 = ['d', 'e', 'f'];
+// console.log(concatenaArrays(concArray3, concArray4));
+
+// MAIOR NÚMERO DE UM ARRAY
+const maiorNumero = function(arr) {
+    let maior = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > maior) {
+            maior = arr[i];
+        }
+    }''
+    return maior;
+}
+
+const maxNum1 = [3, 6, 9, 2, 5];
+const maxNum2 = [12, 45, 7, 32];
+
+console.log(maiorNumero(maxNum1));
+console.log(maiorNumero(maxNum2));
