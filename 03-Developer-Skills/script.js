@@ -1,20 +1,14 @@
 'use strict';
-/*
-const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
-const temperatures2 = [2, 4, 5, 6, 'fim', -2, 34, 3, 40];
 
-function calcAplitude(arr1, arr2){
-  let arr = arr1.concat(arr2);
-  let maxValue = arr.length;
-  let minValue = arr[0];
+let array = [1, -4, 7, 12];
 
-  for(let i = 0; i < arr.length; i++){
-    if (typeof arr[i] !== 'number') continue;
-    const temp = arr[i];
-    
-    if (temp > maxValue) maxValue = temp;
-    if (temp < minValue) minValue = temp;
+function positiveSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= 0) {
+      sum += arr[i];
+    }
   }
-  return maxValue - minValue;
+  return sum;
 }
-console.log(positiveSum(array));
+console.log(positiveSum(arr));
