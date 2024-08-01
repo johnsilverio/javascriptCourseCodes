@@ -11,4 +11,4 @@ function positiveSum(arr) {
   }
   return sum;
 }
-console.log(positiveSum(array));
+console.log(positiveSum(arr));
